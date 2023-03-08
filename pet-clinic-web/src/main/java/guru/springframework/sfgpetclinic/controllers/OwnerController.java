@@ -3,7 +3,9 @@ package guru.springframework.sfgpetclinic.controllers;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.*;
+
 
 @RequestMapping("/owners")
 @Controller
@@ -21,5 +23,6 @@ public class OwnerController {
         model.addAttribute("owners",ownerService.findAll());
         return "owners/index";
     }
+
 
 }
