@@ -21,7 +21,7 @@ public class VetController {
     }
 
     @RequestMapping({"/vets", "/vets/index", "/vets/index.html", "/vets.html"})
-    public String listVets(Model model) {
+    public String listVets(Model model){
 
         model.addAttribute("vets", vetService.findAll());
 
@@ -29,7 +29,7 @@ public class VetController {
     }
 
     @GetMapping("/api/vets")
-    public @ResponseBody Set<Vet> getVetsJson() {
+    public @ResponseBody Set<Vet> getVetsJson(){
 
         return vetService.findAll();
     }
